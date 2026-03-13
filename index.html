@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Cambridge AI Tutor</title>
+
+<style>
+
+body{
+font-family: Arial;
+background:#0f172a;
+color:white;
+text-align:center;
+padding:40px;
+}
+
+.container{
+background:#1e293b;
+padding:30px;
+border-radius:12px;
+width:400px;
+margin:auto;
+}
+
+input{
+width:90%;
+padding:10px;
+margin:10px;
+border-radius:6px;
+border:none;
+}
+
+button{
+padding:12px 20px;
+background:#38bdf8;
+border:none;
+border-radius:8px;
+cursor:pointer;
+font-weight:bold;
+}
+
+button:hover{
+background:#0ea5e9;
+}
+
+.notes{
+margin-top:20px;
+background:#334155;
+padding:15px;
+border-radius:8px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>Cambridge AI Tutor</h1>
+
+<div class="container">
+
+<form method="POST">
+
+<input type="text" name="subject" placeholder="Subject">
+
+<input type="text" name="topic" placeholder="Topic">
+
+<input type="text" name="level" placeholder="Level">
+
+<br>
+
+<button type="submit">Generate Notes</button>
+
+</form>
+
+{% if notes %}
+
+<div class="notes">
+
+<h3>Generated Notes</h3>
+
+<p>{{ notes }}</p>
+
+</div>
+
+{% endif %}
+
+</div>
+
+</body>
+
+</html>
